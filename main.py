@@ -76,7 +76,5 @@ def upload_files():
     with open('./success.html', 'r', encoding='utf-8') as f:
         return f.read()
 
-
-
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
